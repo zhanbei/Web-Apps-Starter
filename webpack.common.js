@@ -34,7 +34,7 @@ module.exports = {
 	plugins: [
 		new CleanWebpackPlugin(),
 		new HtmlWebpackPlugin({
-			template: `./public/index.html`,
+			template: `./assets/index.html`,
 			filename: './index.html',
 		}),
 		new CheckerPlugin(),

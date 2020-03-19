@@ -20,6 +20,7 @@ module.exports = merge(common, {
 		contentBase: [
 			path.resolve('public'),
 			path.resolve('assets'),
+			path.resolve('temp'),
 		],
 		proxy: {
 			'/api': {
