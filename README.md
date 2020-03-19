@@ -25,11 +25,15 @@ this repo may help you walk out.
 Add as a git remote repo, then fetch and merge.
 
 ```bash
-git remote add tmplt https://github.com/zhanbei/Typed-MaterialUI-Starter
+git remote add tmplt https://github.com/zhanbei/Web-Apps-Starter.git
 
 git fetch tmplt master
 
+# Prepare(Clean) your workspace for the files to be merged.
 git merge tmplt/master
+
+# Fix potential conflicts and commit.
+git commit -m '[*] Merged remote tmplt repo from github@zhanbei#Web-Apps-Starter.'
 ```
 
 
