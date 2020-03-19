@@ -17,7 +17,8 @@ module.exports = {
 		filename: '[name].bundle.js',
 		chunkFilename: '[name].chunk.js',
 		path: path.resolve('./dist'),
-		publicPath: '/built',
+		// FIX-ME Not possible to use relative path corresponding to the target html in "assets/pages".
+		publicPath: '/',
 	},
 	resolve: {
 		extensions: ['.ts', '.tsx', '.js', '.jsx', '.json', '.less'],

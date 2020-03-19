@@ -8,7 +8,8 @@ const getDevApplication = (app) => {
 	if (app.includes(',')) {
 		return getApplicationsToBeBuilt(app, true);
 	}
-	const entry = {app: apps[app] || apps.app};
+	const entry = {[app]: apps[app] || apps.app};
+	if (!entry.app) {entry.app = apps[app] || apps.app;}
 	console.log(`Developing the ${JSON.stringify(entry)} app.`);
 	return entry;
 };
