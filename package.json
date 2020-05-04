@@ -4,8 +4,8 @@
   "description": "A framework with webpack integrated, empowering you to start quantities of applications at ease.",
   "main": "index.js",
   "scripts": {
-    "build": "DEV_APPS=all webpack --config webpack.prod.js | tee -a loxal/logs/build-production_`date +%Y-%m-%d`.txt || true && ls -al dist",
-    "start": "DEV_APPS=all webpack-dev-server --color --open --config webpack.dev.js --port 3456 --hot --host 0.0.0.0",
+    "build": "webpack --config webpack.prod.js | tee -a loxal/logs/build-production_`date +%Y-%m-%d`.txt || true && ls -al dist",
+    "start": "webpack-dev-server --color --open --config webpack.dev.js --port 3456 --hot --host 0.0.0.0",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Fisher",
