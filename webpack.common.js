@@ -6,7 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {CheckerPlugin} = require('awesome-typescript-loader');
 const apps = require('./apps');
 
-const entry = process.env.DEV_APP ? apps.getDevApplication(process.env.DEV_APP) : apps.getApplicationsToBeBuilt(process.env.APPS);
+const entry = process.env.DEV_APPS ? apps.getDevApplication(process.env.DEV_APPS) : apps.getApplicationsToBeBuilt(process.env.APPS);
 
 // @see https://www.typescriptlang.org/docs/handbook/react-&-webpack.html
 module.exports = {
