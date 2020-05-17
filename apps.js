@@ -4,14 +4,6 @@ const apps = {
 	app: './src/index.tsx',
 };
 
-const getDevApplication = (app) => {
-	if (!app || app === 'all' || app.includes(',')) {return getApplicationsToBeBuilt(app, true);}
-	const entry = {[app]: apps[app] || apps.app};
-	if (!entry.app) {entry.app = apps[app] || apps.app;}
-	console.log(`Developing the ${JSON.stringify(entry)} app.`);
-	return entry;
-};
-
 const getApplicationsToBeBuilt = (env, dev = false) => {
 	if (!env || env === 'all') {
 		console.log(`${dev ? 'Developing' : 'Building'} All Available Applications:`);
@@ -29,6 +21,5 @@ const getApplicationsToBeBuilt = (env, dev = false) => {
 
 module.exports = {
 	apps,
-	getDevApplication,
 	getApplicationsToBeBuilt,
 };

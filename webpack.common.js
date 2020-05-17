@@ -6,7 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {CheckerPlugin} = require('awesome-typescript-loader');
 const apps = require('./apps');
 
-const entry = process.env.DEV_APPS ? apps.getDevApplication(process.env.DEV_APPS) : apps.getApplicationsToBeBuilt(process.env.APPS);
+const entry = apps.getApplicationsToBeBuilt(process.env.DEV_APPS, process.argv.join(' ').includes('webpack-dev-server'));
 
 // @see https://www.typescriptlang.org/docs/handbook/react-&-webpack.html
 module.exports = {
@@ -18,7 +18,7 @@ module.exports = {
 		chunkFilename: '[name].chunk.js',
 		path: path.resolve('./dist'),
 		// FIX-ME Not possible to use relative path corresponding to the target html in "assets/pages".
-		publicPath: '/',
+		publicPath: '/built',
 	},
 	resolve: {
 		extensions: ['.ts', '.tsx', '.js', '.jsx', '.json', '.less'],
